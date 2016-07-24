@@ -15,9 +15,10 @@ public class PhoenixExample {
         PreparedStatement ps = null;
 
         try {
+            System.out.println("start....");
             // Connect to the database
-            connection = DriverManager.getConnection("jdbc:phoenix:localhost");
-
+            connection = DriverManager.getConnection("jdbc:phoenix:localhost:8765");
+System.out.println("start....2");
             // Create a JDBC statement
             statement = connection.createStatement();
 
@@ -38,6 +39,7 @@ public class PhoenixExample {
             }
         }
         catch(SQLException e) {
+             System.out.println("Table SQLException");
             e.printStackTrace();
         }
         finally {
