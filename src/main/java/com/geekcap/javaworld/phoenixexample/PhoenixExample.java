@@ -17,19 +17,19 @@ public class PhoenixExample {
         try {
             System.out.println("start....");
             // Connect to the database
-            connection = DriverManager.getConnection("jdbc:phoenix:52.208.158.42");
+            connection = DriverManager.getConnection("jdbc:phoenix:52.208.47.78:8765");
 System.out.println("start....2");
             // Create a JDBC statement
             statement = connection.createStatement();
 
             // Execute our statements
-            statement.executeUpdate("create table hello (mykey integer not null primary key, mycolumn varchar)");
-            statement.executeUpdate("upsert into hello values (1,'Hello World')");
-            statement.executeUpdate("upsert into hello values (2,'Tôi có người em vĩ dạ gặp bên chợ đông ba')");
+            statement.executeUpdate("create table kul (mykey integer not null primary key, mycolumn varchar)");
+            statement.executeUpdate("upsert into kul values (1,'Hello World')");
+            statement.executeUpdate("upsert into kul values (2,'Tôi có người em vĩ dạ gặp bên chợ đông ba')");
             connection.commit();
 
             // Query for table
-            ps = connection.prepareStatement("select * from hello");
+            ps = connection.prepareStatement("select * from kul");
             rs = ps.executeQuery();
             System.out.println("Table Values");
             while(rs.next()) {
