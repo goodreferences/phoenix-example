@@ -23,9 +23,9 @@ System.out.println("start....2");
             statement = connection.createStatement();
 
             // Execute our statements
-            statement.executeUpdate("create table javatest (mykey integer not null primary key, mycolumn varchar)");
-            statement.executeUpdate("upsert into javatest values (1,'Hello')");
-            statement.executeUpdate("upsert into javatest values (2,'Java Application')");
+            statement.executeUpdate("create table cust (mykey integer not null primary key, mycolumn varchar)");
+            statement.executeUpdate("upsert into cust values (1,'Hello')");
+            statement.executeUpdate("upsert into cust values (2,'Java Application')");
             connection.commit();
 
             // Query for table
