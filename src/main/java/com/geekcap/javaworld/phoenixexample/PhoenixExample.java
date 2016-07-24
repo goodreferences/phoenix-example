@@ -23,13 +23,13 @@ System.out.println("start....2");
             statement = connection.createStatement();
 
             // Execute our statements
-            statement.executeUpdate("create table cust (mykey integer not null primary key, mycolumn varchar)");
-            statement.executeUpdate("upsert into cust values (1,'Hello')");
-            statement.executeUpdate("upsert into cust values (2,'Java Application')");
+            statement.executeUpdate("create table hello (mykey integer not null primary key, mycolumn varchar)");
+            statement.executeUpdate("upsert into hello values (1,'Hello World')");
+            statement.executeUpdate("upsert into hello values (2,'Tôi có người em vĩ dạ gặp bên chợ đông ba')");
             connection.commit();
 
             // Query for table
-            ps = connection.prepareStatement("select * from javatest");
+            ps = connection.prepareStatement("select * from hello");
             rs = ps.executeQuery();
             System.out.println("Table Values");
             while(rs.next()) {
