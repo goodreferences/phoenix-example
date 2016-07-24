@@ -17,7 +17,7 @@ public class PhoenixExample {
         try {
             System.out.println("start....");
             // Connect to the database
-            connection = DriverManager.getConnection("jdbc:phoenix:localhost");
+            connection = DriverManager.getConnection("jdbc:phoenix:ip-172-31-27-113.eu-west-1.compute.internal");
 System.out.println("start....2");
             // Create a JDBC statement
             statement = connection.createStatement();
